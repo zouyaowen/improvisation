@@ -38,5 +38,7 @@ git push origin -d branchA
 git merge <branch>
 #在合并改动之前，你可以使用如下命令预览差异
 git diff <source_branch> <target_branch>
+
+#tihuan
 ```
 
