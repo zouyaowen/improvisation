@@ -33,5 +33,10 @@ git push origin branchA
 git branch -d branchA
 #删除远程分支
 git push origin -d branchA
+
+#要合并其他分支到你的当前分支
+git merge <branch>
+#在合并改动之前，你可以使用如下命令预览差异
+git diff <source_branch> <target_branch>
 ```
 
