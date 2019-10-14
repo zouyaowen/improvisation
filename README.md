@@ -39,6 +39,13 @@ git merge <branch>
 #在合并改动之前，你可以使用如下命令预览差异
 git diff <source_branch> <target_branch>
 
-#tihuan
+#替换本地改动
+#假如你操作失误（当然，这最好永远不要发生），你可以使用如下命令替换掉本地改动：
+git checkout -- <filename>
+#此命令会使用 HEAD 中的最新内容替换掉你的工作目录中的文件。已添加到暂存区的改动以及新文件都不会受到影响。
+
+#假如你想丢弃你在本地的所有改动与提交，可以到服务器上获取最新的版本历史，并将你本地主分支指向它：
+git fetch origin
+git reset --hard origin/master
 ```
 
