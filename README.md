@@ -47,5 +47,8 @@ git checkout -- <filename>
 #假如你想丢弃你在本地的所有改动与提交，可以到服务器上获取最新的版本历史，并将你本地主分支指向它：
 git fetch origin
 git reset --hard origin/master
+
+#git merge与git rebase区别
+#meger是将其他分支合并到当前分支；rebase是将当前分支移植到别的分支
 ```
 
