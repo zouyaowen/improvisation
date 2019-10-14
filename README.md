@@ -22,5 +22,16 @@ git branch develop
 git checkout develop
 #将本地分支上传为到远端
 git push origin develop
+
+#?
+git submodule init；
+git submodule update
+
+#删除本地分支
+git branch branchA
+git push origin branchA
+git branch -d branchA
+#删除远程分支
+git push origin -d branchA
 ```
 
