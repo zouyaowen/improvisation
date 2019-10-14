@@ -18,5 +18,9 @@ git commit -am 'message' -am等同于-a -m
 git branch develop
 #创建并切换到新创建的分支
 #git checkout -b develop
+#切换分支
+git checkout develop
+#将本地分支上传为到远端
+git push origin develop
 ```
 
