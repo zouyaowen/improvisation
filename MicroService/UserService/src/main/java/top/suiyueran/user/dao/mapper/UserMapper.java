@@ -1,7 +1,7 @@
 package top.suiyueran.user.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 import top.suiyueran.user.entity.UserDO;
 
 /**
@@ -10,6 +10,5 @@ import top.suiyueran.user.entity.UserDO;
  * @Date: 19:42 2019/11/9
  * @Modifyed by:
  */
-@Repository
 public interface UserMapper extends BaseMapper<UserDO> {
 }

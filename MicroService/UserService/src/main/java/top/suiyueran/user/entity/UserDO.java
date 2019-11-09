@@ -1,6 +1,8 @@
 package top.suiyueran.user.entity;
 
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -12,6 +14,7 @@ import java.time.LocalDateTime;
  * @Modifyed by:
  */
 @Data
+@TableName("mark_user")
 public class UserDO {
     private Long id;
     private String userCode;
@@ -20,5 +23,6 @@ public class UserDO {
     private Integer gender;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
+    @TableLogic
     private Integer valid;
 }

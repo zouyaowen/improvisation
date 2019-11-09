@@ -1,7 +1,9 @@
 package top.suiyueran.user.controller.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -10,7 +12,8 @@ import java.time.LocalDateTime;
  * @Date: 20:43 2019/11/9
  * @Modifyed by:
  */
-public class UserVO {
+@Data
+public class UserVO implements Serializable {
     @JsonIgnore
     private Long id;
     private String userCode;
