@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Gateway/Gateway.iml" filepath="$PROJECT_DIR$/Gateway/Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MicroService/MarkService/MarkService.iml" filepath="$PROJECT_DIR$/MicroService/MarkService/MarkService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MicroService/MicroService.iml" filepath="$PROJECT_DIR$/MicroService/MicroService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MicroService/UserService/UserService.iml" filepath="$PROJECT_DIR$/MicroService/UserService/UserService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/improvisation.iml" filepath="$PROJECT_DIR$/improvisation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-core/service-core.iml" filepath="$PROJECT_DIR$/service-core/service-core.iml" />
+    </modules>
+  </component>
+</project>
