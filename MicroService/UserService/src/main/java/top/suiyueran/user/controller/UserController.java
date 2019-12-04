@@ -1,5 +1,9 @@
 package top.suiyueran.user.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +24,7 @@ import java.util.List;
  * @Date: 18:54 2019/11/9
  * @Modifyed by:
  */
+@Api("用户接口")
 @RestController
 @Slf4j
 @RequestMapping("/user")
@@ -28,7 +33,8 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping("/")
+    @ApiOperation("获取所有数据")
+    @GetMapping("/list")
     public List<UserVO> list() {
         List<UserModel> list = userService.list();
         ArrayList<UserVO> userVOList = new ArrayList<>();
@@ -43,8 +49,9 @@ public class UserController {
         return null;
     }
 
-
+    @ApiOperation("根据ID获取数据")
     @GetMapping("/{id}")
+    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "long")
     public UserVO findById(@PathVariable("id") Long id) {
         UserModel byId = userService.findById(id);
         UserVO userVO = new UserVO();
@@ -52,7 +59,11 @@ public class UserController {
         return userVO;
     }
 
+    @ApiOperation("根据编号获取数据")
     @GetMapping("/code/{userCode}")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "userCode", value = "用户编号", required = true, dataType = "String")
+    })
     public UserVO findByCode(@PathVariable("userCode") String code) {
         UserModel byId = userService.findByCode(code);
         UserVO userVO = new UserVO();
